@@ -1,10 +1,11 @@
 import os
 import shutil
 
-current_dir = os.path.dirname('C:/Users/jbaut/Carpetas Python/Carpeta a ordenar/')
+#IMPORTANTE!! Revisar este directorio sino no funciona. No olvidar "/" al final
+current_dir = os.path.dirname('C:/Users/jbaut/Desktop/Programing/Python/Udemy-Python Developer/Proyectos/Carpeta a ordenar/ordenador-de-carpetas-python/')
 
 for filename in os.listdir(current_dir):
-
+    #Con este método las carpetas se crean solas
     if filename.endswith(('.jpg', '.png', '.gif')):
         if not os.path.exists("Images"): 
             os.makedirs('Images')
