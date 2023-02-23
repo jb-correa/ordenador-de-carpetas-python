@@ -6,7 +6,7 @@ current_dir = os.path.dirname('C:/Users/jbaut/Desktop/Programing/Python/Udemy-Py
 
 for filename in os.listdir(current_dir):
     #Con este método las carpetas se crean solas
-    if filename.endswith(('.jpg', '.png', '.gif')):
+    if filename.endswith(('.jpg', '.png', '.gif', '.jepg')):
         if not os.path.exists("Images"): 
             os.makedirs('Images')
         shutil.copy(filename, 'Images')
@@ -14,7 +14,7 @@ for filename in os.listdir(current_dir):
         print('Images folder done')
 
     
-    if filename.endswith(('.pdf', '.docx')):
+    if filename.endswith(('.pdf', '.docx', '.doc')):
         if not os.path.exists("Documents"): 
             os.makedirs('Documents')
         shutil.copy(filename, 'Documents')
