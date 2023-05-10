@@ -4,9 +4,10 @@ import shutil
 #IMPORTANTE!! Revisar este directorio sino no funciona. No olvidar "/" al final
 current_dir = os.path.dirname('C:/Users/jbaut/Desktop/Programing/Python/Udemy-Python Developer/Proyectos/Carpeta a ordenar/ordenador-de-carpetas-python/')
 
+
 for filename in os.listdir(current_dir):
     #Con este método las carpetas se crean solas
-    if filename.endswith(('.jpg', '.png', '.gif', '.jepg')):
+    if filename.endswith(('.jpg', '.png', '.gif', '.jepg', '.avif')):
         if not os.path.exists("Images"): 
             os.makedirs('Images')
         shutil.copy(filename, 'Images')
@@ -14,7 +15,7 @@ for filename in os.listdir(current_dir):
         print('Images folder done')
 
     
-    if filename.endswith(('.pdf', '.docx', '.doc')):
+    if filename.endswith(('.pdf', '.docx', '.doc', '.txt')):
         if not os.path.exists("Documents"): 
             os.makedirs('Documents')
         shutil.copy(filename, 'Documents')
